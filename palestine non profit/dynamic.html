@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Meta tags for character set and viewport -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Title of the webpage -->
+  <title>Fake Dynamic Data</title>
+  <!-- Internal styles for the page -->
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 20px;
+    }
+
+    table {
+      width: 50%;
+      margin: 20px auto;
+      border-collapse: collapse;
+    }
+
+    th, td {
+      border: 1px solid #ddd;
+      padding: 10px;
+    }
+
+    th {
+      background-color: #f2f2f2;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Page heading -->
+  <h1>Fake Dynamic Data Example</h1>
+
+  <!-- User Information section -->
+  <h2>User Information</h2>
+  <div id="userInfo"></div>
+
+  <!-- Product List section -->
+  <h2>Product List</h2>
+  <table id="productTable">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Price</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <!-- JavaScript section for fake dynamic data -->
+  <script>
+    // Fake dynamic data for user
+    var userData = {
+      id: 123,
+      username: "john_doe",
+      email: "john.doe@example.com",
+      age: 25,
+      is_active: true
+    };
+
+    // Fake dynamic data for products
+    var products = [
+      { id: 1, name: "Product A", price: 19.99 },
+      { id: 2, name: "Product B", price: 29.99 }
+    ];
+
+    // Display user information
+    document.getElementById('userInfo').innerHTML = `
+      <p>ID: ${userData.id}</p>
+      <p>Username: ${userData.username}</p>
+      <p>Email: ${userData.email}</p>
+      <p>Age: ${userData.age}</p>
+      <p>Active: ${userData.is_active ? 'Yes' : 'No'}</p>
+    `;
+
+    // Display product list
+    var productTableBody = document.getElementById('productTable').getElementsByTagName('tbody')[0];
+    products.forEach(function(product) {
+      var row = productTableBody.insertRow();
+      var cell1 = row.insertCell(0);
+      var cell2 = row.insertCell(1);
+      var cell3 = row.insertCell(2);
+      cell1.innerHTML = product.id;
+      cell2.innerHTML = product.name;
+      cell3.innerHTML = product.price;
+    });
+  </script>
+
+</body>
+</html>

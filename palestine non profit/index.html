@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ASA Foundations</title>
+
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+  <h1 class="logo"></h1>
+
+  <script src="script.js"></script>
+
+  <script src="https://replit.com/public/js/replit-badge-v2.js" theme="dark" position="bottom-right">
+  </script>
+
+  <section class="hero-section">
+    <a href="index.html"> <button class="call-to-action-btn">Home</button> </a>
+    <a href="About.html"><button class="call-to-action-btn">About </button></a>
+    <a href="donations.html"> <button class="call-to-action-btn">Donations</button></a>
+    <a href="UserDocumentation.html"> <button class="call-to-action-btn">User Documentation</button></a>
+  </section>
+
+  <section>
+    <center>
+      <div class="title">ASA FOUNDATIONS WEBSITE SUPPORTING PALESTINE</div>
+    </center>
+    <br>
+    <br>
+    <br>
+    <Center><button class="help" type="button" onclick="Help()">HELP PALESTINE</button></Center>
+    <br>
+    <br>
+  </section>
+  <section class="information">
+    <div style="background-color:white">
+      <br><br>
+      <center>
+        <h3 id="data" style="color:red;display: inline-block;font-size: 15px;
+      font-family:Unbounded;">2300000</h3>
+        <h3 style="color:black;display: inline-block;font-size: 10px;
+      font-family:Unbounded;">in need of humanitarian aid</h3>
+      </center>
+      <br>
+    
+      <center>
+        <h3 style="color:red;display: inline-block;font-size: 15px;
+      font-family:Unbounded;">95%</h3>
+        <h3 style="color:black;display: inline-block;font-size: 10px;
+      font-family:Unbounded;">without water</h3>
+      </center>
+      <br>
+
+      <center>
+        <h3 id = "data2" style="color:red;display: inline-block;font-size: 15px;
+      font-family:Unbounded;"" >17000</h3>
+    <h3 style = " color:black;display: inline-block;font-size: 10px; font-family:Unbounded;">inoccent civilians killed
+        </h3>
+      </center>
+      <br>
+      <br>
+
+      <Center>
+        <h3 style="color:black;display: inline-block;font-size: 10px;
+              font-family:Unbounded;">Palestine has suffered numerous bombings from its neighboring country, Israel. To
+          help all the victims of such traversities, this website was created. To Raise awareness, take action, and help
+          all civilians.</h3>
+      </Center>
+      <br>
+      <br>
+      <br>
+      <br>
+    </div>
+    </text-align:center>
+  </section>
+
+  <script>
+    function Help() {
+      window.location.href =
+        "https://palestine-non-profit.ap-10bg-866744.repl.co/donations.html";
+    }
+
+    // This function will get invoked after loading the complete page
+    window.onload = function () {
+
+      // This function will be invoked after every set interval
+      setInterval(function () {
+
+        document.getElementById('data').innerHTML = parseInt(document.getElementById('data').innerText) + 1;
+
+      }, 500); // Delay of milliseconds
+    };
+    setInterval(function () {
+      document.getElementById('data2').innerHTML = parseInt(document.getElementById('data2').innerText) + 1;
+    }, 1000);
+      
+
+  </script>
+
+  <section class= "why">
+  <br>
+    <br>
+  <div class = "container">
+    <h1>Feel free to contact us about any questions and donation help!</h1>
+    <br>
+    <form style = "font-family: Unbounded;border: 20px; border-color: white; size: 30px"  method="POST">
+
+
+      <button style = "border-width: 30px;border-color: white;font-family: Unbounded; size: 70px" type = "submit"><a style = "font-family: Unbounded; size: 20px; color: black" href = "https://formsubmit.co/el/deniro">Contact Us!</a></button>
+    </form>
+  </div>
+    <br>
+    <br>
+
+
+
+
+  </section>
+</body>
+
+</html>
